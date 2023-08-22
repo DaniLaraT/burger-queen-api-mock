@@ -11,19 +11,38 @@ content-type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY1MDIzMzkwOSwiZXhwIjoxNjUwMjM3NTA5LCJzdWIiOiIyIn0.nS99u-MBatZHbexMUenwsGdS8oV55BIaGwI6PSP7BC8
 
 {
-    "email": "cheff@hello.com",
+    "email": "waiter@bbq.com",
     "password": "123456",
-    "role": "chef"
-
+    "role": "waiter"
 }
 
 GET http://localhost:8080/users HTTP/1.1
 content-type: application/json
 authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY1MDIzMzkwOSwiZXhwIjoxNjUwMjM3NTA5LCJzdWIiOiIyIn0.nS99u-MBatZHbexMUenwsGdS8oV55BIaGwI6PSP7BC8
 
-GET http://localhost:8080/products HTTP/1.1
+POST   http://localhost:8080/products HTTP/1.1
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY1MDIzMzkwOSwiZXhwIjoxNjUwMjM3NTA5LCJzdWIiOiIyIn0.nS99u-MBatZHbexMUenwsGdS8oV55BIaGwI6PSP7BC8
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MjY3MTEzMywiZXhwIjoxNjkyNjc0NzMzLCJzdWIiOiIyIn0.bMp80SQYC6Lh-eSikmooi6nPlk_kPEa0rTCKLHIUegM
+
+{
+      "name": "Hamburguesa simple",
+      "price": 1000,
+      "image": "https://github.com/DaniLaraT/DEV005-burger-queen-api-client/blob/RamaDani/img/almuerzo/1.png?raw=true",
+      "type": "Almuerzo"
+    }
+
+PATCH  http://localhost:8080/products HTTP/1.1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MjY3MDQzMCwiZXhwIjoxNjkyNjc0MDMwLCJzdWIiOiIyIn0.hlXn9iyQSDfKzh44K37NJmSq57JOmWsNPkO0i_vmC5o
+
+{
+      "name": "Jugo de frutas natural",
+      "price": 700,
+      "image": "https://github.com/DaniLaraT/DEV005-burger-queen-api-client/blob/RamaDani/img/desayuno/4.png?raw=true",
+      "type": "Desayuno",
+      "id": 4
+    }
+
 
 GET http://localhost:8080/orders HTTP/1.1
 content-type: application/json
