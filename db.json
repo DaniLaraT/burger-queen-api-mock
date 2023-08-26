@@ -144,6 +144,13 @@
       "image": "https://github.com/DaniLaraT/DEV005-burger-queen-api-client/blob/RamaDani/img/almuerzo/8.png?raw=true",
       "type": "Almuerzo",
       "id": 12
+    },
+    {
+      "name": "Jugo de frutas natural",
+      "price": 700,
+      "image": "https://github.com/DaniLaraT/DEV005-burger-queen-api-client/blob/RamaDani/img/desayuno/4.png?raw=true",
+      "type": "Desayuno",
+      "id": 4
     }
   ],
   "users": [

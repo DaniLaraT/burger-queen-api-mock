@@ -8,22 +8,23 @@ content-type: application/json
 
 POST http://localhost:8080/users HTTP/1.1
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY1MDIzMzkwOSwiZXhwIjoxNjUwMjM3NTA5LCJzdWIiOiIyIn0.nS99u-MBatZHbexMUenwsGdS8oV55BIaGwI6PSP7BC8
-
-{
-    "email": "waiter@bbq.com",
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MjgzOSwiZXhwIjoxNjkzMDg2NDM5LCJzdWIiOiIyIn0.JkPW1HLZFgF8vdLZKmi_QUs11pJVP78JRJalpvjbTN4
+{    "email": "waiter@bbq.com",
     "password": "123456",
     "role": "waiter"
 }
 
 GET http://localhost:8080/users HTTP/1.1
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY1MDIzMzkwOSwiZXhwIjoxNjUwMjM3NTA5LCJzdWIiOiIyIn0.nS99u-MBatZHbexMUenwsGdS8oV55BIaGwI6PSP7BC8
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MjgzOSwiZXhwIjoxNjkzMDg2NDM5LCJzdWIiOiIyIn0.JkPW1HLZFgF8vdLZKmi_QUs11pJVP78JRJalpvjbTN4
+
+GET http://localhost:8080/products HTTP/1.1
+content-type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MzIyNCwiZXhwIjoxNjkzMDg2ODI0LCJzdWIiOiIyIn0.WeDLDSaeSuZCRnOcPcgz_6MbO4TvehnJEkCIwGckbKY
 
 POST   http://localhost:8080/products HTTP/1.1
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MjY3MTEzMywiZXhwIjoxNjkyNjc0NzMzLCJzdWIiOiIyIn0.bMp80SQYC6Lh-eSikmooi6nPlk_kPEa0rTCKLHIUegM
-
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MjQ3OSwiZXhwIjoxNjkzMDg2MDc5LCJzdWIiOiIyIn0.OyN5LdHXbhBNMGqsfKqWFOvVPVwU8kLxhf7VgKZHnms
 {
       "name": "Hamburguesa simple",
       "price": 1000,
@@ -31,9 +32,23 @@ authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlL
       "type": "Almuerzo"
     }
 
+POST http://localhost:8080/products HTTP/1.1
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MzIyNCwiZXhwIjoxNjkzMDg2ODI0LCJzdWIiOiIyIn0.WeDLDSaeSuZCRnOcPcgz_6MbO4TvehnJEkCIwGckbKY
+
+{
+    "name": "Jugo de frutas natural",
+      "price": 700,
+      "image": "https://github.com/DaniLaraT/DEV005-burger-queen-api-client/blob/RamaDani/img/desayuno/4.png?raw=true",
+      "type": "Desayuno",
+      "id": 4
+}
+
+
+
 PATCH  http://localhost:8080/products HTTP/1.1
 content-type: application/json
-authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MjY3MDQzMCwiZXhwIjoxNjkyNjc0MDMwLCJzdWIiOiIyIn0.hlXn9iyQSDfKzh44K37NJmSq57JOmWsNPkO0i_vmC5o
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdyYWNlLmhvcHBlckBzeXN0ZXJzLnh5eiIsImlhdCI6MTY5MzA4MjQ3OSwiZXhwIjoxNjkzMDg2MDc5LCJzdWIiOiIyIn0.OyN5LdHXbhBNMGqsfKqWFOvVPVwU8kLxhf7VgKZHnms
 
 {
       "name": "Jugo de frutas natural",
