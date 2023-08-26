@@ -218,6 +218,12 @@
       "password": "$2a$10$Ozz4lul.XnbRD7RkM29quOaB9ya3O6oNWM36WevWKc479ZDwznLK6",
       "role": "waiter",
       "id": 12
+    },
+    {
+      "email": "owner@hello.com",
+      "password": "$2a$10$U9dDz8/WoksZIUy5b9S9Yuku092PuPEbtew8eOzqtRhb.1d5Ok3l.",
+      "role": "owner",
+      "id": 13
     }
   ]
 }
